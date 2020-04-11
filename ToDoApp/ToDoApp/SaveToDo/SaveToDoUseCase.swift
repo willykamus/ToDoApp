@@ -8,10 +8,8 @@
 
 import Foundation
 
-class SaveToDo {
-    func save(toDo: ToDo) -> Bool {
-        return true
-    }
+protocol SaveToDo {
+    func save(toDo: ToDo) -> Bool
 }
 
 

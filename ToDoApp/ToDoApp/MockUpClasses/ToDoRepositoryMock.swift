@@ -10,7 +10,7 @@ import Foundation
 
 class ToDoRepositoryMock {
     
-    let list:[ToDo] = [ToDo]()
+    var list:[ToDo] = [ToDo]()
     
 }
 
@@ -20,4 +20,11 @@ extension ToDoRepositoryMock: GetToDo {
         return self.list
     }
     
+}
+
+extension ToDoRepositoryMock: SaveToDo {
+    func save(toDo: ToDo) -> Bool {
+        self.list.append(toDo)
+        return true
+    }
 }

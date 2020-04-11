@@ -14,7 +14,7 @@ class SaveToDoTest: XCTestCase {
     let todo:ToDo = ToDo(title: "Title", description: nil)
     
     func testSaveToDo() {
-        let save = SaveToDo()
-        XCTAssertTrue(save.save(toDo: self.todo))
+        let save = ToDoRepositoryMock()
+        XCTAssertTrue(save.save(toDo: todo))
     }
 }
